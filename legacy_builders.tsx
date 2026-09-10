@@ -427,12 +427,13 @@ export default function App() {
           </div>
           <p className="text-slate-400 text-sm mb-8">Pilih paket pembangunan yang sesuai dengan anggaran dan kebutuhan material Anda.</p>
 
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pt-6 pb-4 no-scrollbar">
             {pageData.pricing.map((paket, idx) => (
-              <div key={idx} className={`snap-center shrink-0 w-[280px] p-6 rounded-2xl flex flex-col relative ${paket.recommended ? 'bg-amber-500 text-slate-900' : 'bg-slate-800 border border-slate-700 text-white'}`}>
+              <div key={idx} className={`snap-center shrink-0 w-[280px] p-6 rounded-2xl flex flex-col relative ${paket.recommended ? 'bg-amber-500 text-slate-900 shadow-xl ring-2 ring-amber-400/50' : 'bg-slate-800 border border-slate-700 text-white'}`}>
                 {paket.recommended && (
-                  <div className="absolute top-0 right-6 -translate-y-1/2 bg-slate-900 text-amber-400 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-500">
-                    Terpopuler
+                  <div className="absolute -top-3.5 right-5 bg-slate-950 text-amber-300 text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full border-2 border-amber-400 shadow-2xl flex items-center gap-1.5 z-20">
+                    <Star size={13} className="fill-amber-400 text-amber-400 shrink-0" />
+                    <span>TERPOPULER</span>
                   </div>
                 )}
                 <h3 className="text-lg font-black mb-2">{paket.plan}</h3>
